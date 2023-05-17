@@ -1,7 +1,7 @@
 import { ButtonStyles } from "./styles";
 
 function Button() {
-  return <Button>FIND EVENT</Button>;
+  return <ButtonStyles>FIND EVENT</ButtonStyles>;
 }
 
 export default Button;

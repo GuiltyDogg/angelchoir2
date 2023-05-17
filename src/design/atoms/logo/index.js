@@ -1,7 +1,7 @@
 function Logo() {
   return (
     <div>
-      <img src="./images/AngelChoir-TRANS-LOGO.png" alt="AngelChoir Logo" />
+      <img height="120px" src="./images/AngelChoir-TRANS-LOGO.png" alt="AngelChoir Logo" />
     </div>
   );
 }
