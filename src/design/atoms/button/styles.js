@@ -12,4 +12,7 @@ export const ButtonStyles = styled.button`
   color: ${colors.white};
   padding: ${whitespace.most};
   border-radius: ${borderradius.medium};
+  &: hover {
+    background-color: ${colors.black};
+  }
 `;
