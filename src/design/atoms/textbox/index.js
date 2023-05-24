@@ -1,5 +1,7 @@
-function Textbox() {
-  return <textarea></textarea>;
+import { StyledTextBox } from "./styles";
+
+function TextBox() {
+  return <StyledTextBox></StyledTextBox>;
 }
 
-export default Textbox;
+export default TextBox;

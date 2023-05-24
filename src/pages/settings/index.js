@@ -4,16 +4,15 @@ import Avatar from "../../design/atoms/avatar";
 import Icon from "../../design/atoms/icon";
 import Checkbox from "../../design/atoms/checkbox";
 import Textbox from "../../design/atoms/textbox";
-import Textinput from "../../design/atoms/textinput";
+import Input from "../../design/atoms/input";
 
 function Settings() {
   return (
     <div>
       <Logo></Logo>
       <Avatar></Avatar>
-      <Textinput></Textinput>
+      <Input></Input>
       <Textbox></Textbox>
-      <Icon></Icon>
       <Checkbox></Checkbox>
       <Button></Button>
     </div>

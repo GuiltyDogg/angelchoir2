@@ -3,6 +3,6 @@ import whitespace from "../../subatomics/whitespace";
 
 export const AvatarStyles = styled.img`
   display: block;
-  margin: ${ whitespace.most} auto;
-  height: 360px;
+  margin: ${whitespace.most} auto;
+  height: 240px;
 `;
