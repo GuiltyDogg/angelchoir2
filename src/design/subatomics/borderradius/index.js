@@ -1,3 +1,5 @@
 export default {
-  rounded: "10px",
+  light: "3px",
+  medium: "6px",
+  circle: "9999px",
 };

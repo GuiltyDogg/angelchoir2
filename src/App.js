@@ -1,10 +1,11 @@
 import Settings from "./pages/settings";
+import ApplicationContent from "./design/application/content";
 
 function App() {
   return (
-    <div>
+    <ApplicationContent>
       <Settings></Settings>
-    </div>
+    </ApplicationContent>
   );
 }
 

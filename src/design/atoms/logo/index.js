@@ -1,8 +1,8 @@
+import { LogoImage } from './styles';
+
 function Logo() {
   return (
-    <div>
-      <img height="120px" src="./images/AngelChoir-TRANS-LOGO.png" alt="AngelChoir Logo" />
-    </div>
+      <LogoImage src="./images/AngelChoir-TRANS-LOGO.png" alt="AngelChoir Logo" />
   );
 }
 
