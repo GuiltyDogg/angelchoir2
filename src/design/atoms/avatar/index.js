@@ -1,15 +1,22 @@
 import { AvatarStyles } from "./styles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 function Avatar() {
   return (
-    <AvatarStyles
-      src="./images/8324223_ui_essential_app_avatar_profile_icon.png"
-      alt="No Avatar"
-    />
+    // <AvatarStyles
+    //   src="./images/8324223_ui_essential_app_avatar_profile_icon.png"
+    //   alt="No Avatar"
+    // />
+
+    <AvatarStyles>
+      <FontAwesomeIcon icon={faUser} />
+    </AvatarStyles>
   );
 }
 
 export default Avatar;
+
 // import { useState } from "react";
 // import { AvatarStyles } from "./styles";
 
