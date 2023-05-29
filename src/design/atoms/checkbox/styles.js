@@ -3,11 +3,12 @@ import whitespace from "../../subatomics/whitespace";
 
 export const StyledCheck = styled.label`
   margin: ${whitespace.most} 0;
-  display: block;
+  display: flex;
   font-weight: bold;
-  letter-spacing: 1px;
+  justify-content: space-between;
 
   svg {
-    margin-left: ${whitespace.less};
+    height: 20px;
+    margin: 1px ${whitespace.least};
   }
 `;
