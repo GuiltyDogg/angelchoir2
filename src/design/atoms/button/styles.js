@@ -16,9 +16,3 @@ export const ButtonStyles = styled.button`
     background-color: ${colors.black};
   }
 `;
-
-export const DivStyled = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-`;
