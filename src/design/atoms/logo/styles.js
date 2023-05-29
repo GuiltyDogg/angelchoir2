@@ -2,6 +2,6 @@ import styled from "styled-components";
 
 export const LogoImage = styled.img`
   display: block;
-  margin: -64px auto;
-  height: 360px;
+  margin: 0px auto;
+  height: 200px;
 `;
