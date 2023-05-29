@@ -6,7 +6,6 @@ function App() {
   return (
     <ApplicationContent>
       <Settings></Settings>
-      <EventList></EventList>
     </ApplicationContent>
   );
 }
