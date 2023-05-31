@@ -4,17 +4,26 @@ import Avatar from "../../design/atoms/avatar";
 import Checkbox from "../../design/atoms/checkbox";
 import Textbox from "../../design/atoms/textbox";
 import Input from "../../design/atoms/input";
+import AnchoredFooter from "../../design/layout/anchored-footer";
 
 function Settings() {
   return (
-    <div>
-      <Logo></Logo>
-      <Avatar></Avatar>
-      <Input></Input>
-      <Textbox></Textbox>
-      <Checkbox></Checkbox>
-      <Button></Button>
-    </div>
+    <AnchoredFooter
+      window={
+        <>
+          <Logo></Logo>
+          <Avatar></Avatar>
+          <Input></Input>
+          <Textbox></Textbox>
+        </>
+      }
+      footer={
+        <>
+          <Checkbox></Checkbox>
+          <Button></Button>
+        </>
+      }
+    />
   );
 }
 

@@ -8,9 +8,11 @@ export const StyledTextBox = styled.textarea`
   display: block;
   width: 100%;
   height: 150px;
+  min-height: 150px;
   padding: ${whitespace.more};
   margin: ${whitespace.more} 0;
   border: ${colors.black};
   border-radius: ${borderradius.medium};
   background-color: ${colors.lightGray};
+  flex: 1 1 100%;
 `;
