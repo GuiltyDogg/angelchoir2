@@ -1,7 +1,13 @@
 import { StyledInput } from "./styles";
 
-const Input = function () {
-  return <StyledInput placeholder="Username"></StyledInput>;
+const Input = function ({ placeholder, value, onChange }) {
+  return (
+    <StyledInput
+      placeholder={placeholder}
+      onChange={onChange}
+      value={value}
+    ></StyledInput>
+  );
 };
 
 export default Input;

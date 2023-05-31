@@ -12,7 +12,12 @@ export const ButtonStyles = styled.button`
   color: ${colors.white};
   padding: ${whitespace.most};
   border-radius: ${borderradius.medium};
-  &: hover {
+  &:hover {
     background-color: ${colors.black};
+  }
+  &:disabled {
+    background-color: transparent;
+    border: ${colors.lightGray} 2px solid;
+    color: ${colors.lightGray};
   }
 `;

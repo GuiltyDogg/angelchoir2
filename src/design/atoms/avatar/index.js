@@ -3,9 +3,7 @@ import { AvatarStyles } from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
-function Avatar() {
-  const [selectedImage, setSelectedImage] = useState(null);
-
+function Avatar({ selectedImage, setSelectedImage }) {
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
     const imageUrl = URL.createObjectURL(file);

@@ -1,11 +1,11 @@
 import { ButtonStyles } from "./styles";
 
-function Button() {
-  const handleClick = () => {
-    console.log("Takes you to Find Events page");
-  };
-
-  return <ButtonStyles onClick={handleClick}>FIND EVENT</ButtonStyles>;
+function Button({ onClick, disabled, children }) {
+  return (
+    <ButtonStyles onClick={onClick} disabled={disabled}>
+      {children}
+    </ButtonStyles>
+  );
 }
 
 export default Button;

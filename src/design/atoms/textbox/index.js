@@ -1,8 +1,12 @@
 import { StyledTextBox } from "./styles";
 
-function TextBox() {
+function TextBox({ placeholder, value, onChange }) {
   return (
-    <StyledTextBox placeholder="Additional Info (Optional)"></StyledTextBox>
+    <StyledTextBox
+      placeholder={placeholder}
+      value={value}
+      onChange={onChange}
+    ></StyledTextBox>
   );
 }
 
