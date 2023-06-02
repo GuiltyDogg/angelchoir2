@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AvatarStyles } from "./styles";
+import { AvatarCircle, AvatarStyles } from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
@@ -11,7 +11,7 @@ function Avatar({ selectedImage, setSelectedImage }) {
   };
 
   return (
-    <div>
+    <AvatarCircle>
       <input
         type="file"
         accept="image/*"
@@ -28,23 +28,8 @@ function Avatar({ selectedImage, setSelectedImage }) {
           )}
         </AvatarStyles>
       </label>
-    </div>
+    </AvatarCircle>
   );
 }
 
 export default Avatar;
-
-// import { AvatarStyles } from "./styles";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faUser } from "@fortawesome/free-solid-svg-icons";
-
-// function Avatar() {
-//   return (
-
-//     <AvatarStyles>
-//       <FontAwesomeIcon icon={faUser} />
-//     </AvatarStyles>
-//   );
-// }
-
-// export default Avatar;
