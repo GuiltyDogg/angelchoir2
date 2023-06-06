@@ -11,5 +11,5 @@ export const StyledInput = styled.input`
   margin: ${whitespace.more} 0;
   border: ${colors.black};
   border-radius: ${borderradius.medium};
-  background-color: ${colors.lightGray};
+  background-color: ${colors.white};
 `;

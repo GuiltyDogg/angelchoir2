@@ -10,9 +10,8 @@ export const StyledTextBox = styled.textarea`
   height: 150px;
   min-height: 150px;
   padding: ${whitespace.more};
-  margin: ${whitespace.more} 0;
   border: ${colors.black};
   border-radius: ${borderradius.medium};
-  background-color: ${colors.lightGray};
+  background-color: ${colors.white};
   flex: 1 1 100%;
 `;
