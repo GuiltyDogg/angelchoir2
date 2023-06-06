@@ -5,21 +5,29 @@ import borderradius from "../../subatomics/borderradius";
 export const AvatarCircle = styled.div`
   display: flex;
   flex-direction: column;
+  flex: 0 0 200px;
+  width: 200px;
   border-radius: ${borderradius.circle};
-  border: solid 1px black;
+  background: #bf87f6;
+  box-shadow: inset 21px -21px 42px #b580ea, inset -21px 21px 42px #c98eff;
   overflow: hidden;
-  height: 3000px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const AvatarStyles = styled.div`
   display: flex;
   justify-content: center;
   margin: ${whitespace.most} auto;
-  height: 240px;
   color: white;
-  opacity: 50%;
+  align-items: center;
 
   svg {
-    height: 220px;
+    height: 150px;
+    opacity: 50%;
+  }
+
+  img {
+    height: 200px;
   }
 `;
