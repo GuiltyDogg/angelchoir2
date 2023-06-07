@@ -5,7 +5,8 @@ import ApplicationContent from "./design/application/content";
 function App() {
   return (
     <ApplicationContent>
-      <Settings></Settings>
+      {/* <Settings></Settings> */}
+      <EventList></EventList>
     </ApplicationContent>
   );
 }

@@ -1,7 +1,10 @@
+import NavButton from "../../design/atoms/navbutton";
+import NavBar from "../../design/organisms/navbar";
+
 function Eventlist() {
   return (
     <>
-      <h1>This is the Event Page</h1>
+      <NavBar></NavBar>
     </>
   );
 }
