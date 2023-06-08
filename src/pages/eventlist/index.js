@@ -1,10 +1,10 @@
-import NavButton from "../../design/atoms/navbutton";
+import ToolBar from "../../design/atoms/navbar";
 import Events from "../../design/organisms/eventspage";
 
 function Eventlist() {
   return (
     <>
-      <NavButton></NavButton>
+      <ToolBar></ToolBar>
       <Events></Events>
     </>
   );
