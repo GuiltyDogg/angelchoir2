@@ -1,3 +1,1 @@
-import styled from "styled-components";
-
-export const StyledEvents = styled.textbox``;
+import React from "react";
