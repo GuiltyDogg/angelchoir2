@@ -15,7 +15,7 @@ function ToolBar({ onClick }) {
       <StyledTools>
         <FontAwesomeIcon icon={faMagnifyingGlass} />
       </StyledTools>
-      <LogoNav src="./images/aclogo.png" alt="AngelChoir Logo" />
+      <LogoNav src="./images/aclogoangle.png" alt="AngelChoir Logo" />
       <StyledTools>
         <FontAwesomeIcon icon={faBell} />
       </StyledTools>

@@ -9,4 +9,5 @@ export const LogoImage = styled.img`
 export const LogoNav = styled.img`
   display: block;
   height: 40px;
+  filter: brightness(0%);
 `;
