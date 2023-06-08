@@ -4,8 +4,9 @@ import { faCalendar } from "@fortawesome/free-regular-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faBell } from "@fortawesome/free-regular-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
+import { LogoNav } from "../logo/styles";
 
-function NavButton({ onClick }) {
+function ToolBar({ onClick }) {
   return (
     <StyledBar>
       <StyledTools>
@@ -14,6 +15,7 @@ function NavButton({ onClick }) {
       <StyledTools>
         <FontAwesomeIcon icon={faMagnifyingGlass} />
       </StyledTools>
+      <LogoNav src="./images/aclogo.png" alt="AngelChoir Logo" />
       <StyledTools>
         <FontAwesomeIcon icon={faBell} />
       </StyledTools>
@@ -24,4 +26,4 @@ function NavButton({ onClick }) {
   );
 }
 
-export default NavButton;
+export default ToolBar;

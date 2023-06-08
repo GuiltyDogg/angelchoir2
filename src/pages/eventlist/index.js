@@ -1,9 +1,9 @@
-import NavButton from "../../design/atoms/navbutton";
+import ToolBar from "../../design/atoms/navbar";
 
 function Eventlist() {
   return (
     <>
-      <NavButton></NavButton>
+      <ToolBar></ToolBar>
     </>
   );
 }
