@@ -1,4 +1,5 @@
 import ToolBar from "../../design/atoms/navbar";
+import StarBar from "../../design/atoms/starbar";
 import Events from "../../design/organisms/eventspage";
 
 function Eventlist() {
@@ -6,6 +7,7 @@ function Eventlist() {
     <>
       <ToolBar></ToolBar>
       <Events></Events>
+      <StarBar></StarBar>
     </>
   );
 }
