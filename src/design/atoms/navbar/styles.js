@@ -3,7 +3,6 @@ import colors from "../../subatomics/colors";
 import whitespace from "../../subatomics/whitespace";
 
 export const StyledBar = styled.div`
-  background-color: ${colors.darkGray};
   display: flex;
   height: 50px;
   justify-content: space-between;
