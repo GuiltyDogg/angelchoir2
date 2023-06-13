@@ -3,7 +3,7 @@ import Logo from "../../design/atoms/logo";
 import Button from "../../design/atoms/button";
 import Avatar from "../../design/atoms/avatar";
 import Checkbox from "../../design/atoms/checkbox";
-import Textbox from "../../design/atoms/textbox";
+import TextBox from "../../design/atoms/textbox";
 import Input from "../../design/atoms/input";
 import AnchoredFooter from "../../design/layout/anchored-footer";
 import { useCallback } from "react";
@@ -51,14 +51,14 @@ function Settings() {
               setUserName(e.target.value);
             }}
           ></Input>
-          <Textbox
+          <TextBox
             placeholder="Additonal User Info (Optional)"
             value={userInfo}
             onChange={(e) => {
               console.log(e.target.value);
               setUserInfo(e.target.value);
             }}
-          ></Textbox>
+          ></TextBox>
         </>
       }
       footer={

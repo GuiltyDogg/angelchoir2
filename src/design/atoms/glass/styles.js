@@ -12,4 +12,12 @@ export const OverlayPage = styled.div`
   align-items: center;
 `;
 
-export default OverlayPage;
+export const Window = styled.div`
+  position: relative;
+  padding: 32px;
+  width: 33%;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+`;

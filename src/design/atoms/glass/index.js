@@ -1,9 +1,11 @@
-import OverlayPage from "./styles";
+import { OverlayPage, Window } from "./styles";
 
 function GlassWindow() {
   return (
     <OverlayPage>
-      <h1>balls</h1>
+      <Window>
+        <h1>balls</h1>
+      </Window>
     </OverlayPage>
   );
 }
