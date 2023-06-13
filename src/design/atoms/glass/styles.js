@@ -6,7 +6,6 @@ export const OverlayPage = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,9 +14,10 @@ export const OverlayPage = styled.div`
 export const Window = styled.div`
   position: relative;
   padding: 32px;
-  width: 33%;
+  width: 100%;
   height: 50px;
   background-color: white;
   display: flex;
   justify-content: center;
+  opacity: 70%;
 `;
