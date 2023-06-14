@@ -7,7 +7,6 @@ import borderradius from "../../subatomics/borderradius";
 export const EventTitle = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: ${whitespace.base};
   font-size: 50px;
   font-family: ${fonts.font};
 `;
@@ -26,14 +25,15 @@ export const EventBox = styled.div`
 
 export const EventDiv = styled.div`
   background-color: ${colors.bgWhite};
-  padding-bottom: ${whitespace.most};
+  padding-bottom: ${whitespace.base};
+  width: 100%;
 `;
 
 export const EventImage = styled.img`
   position: absolute;
   bottom: ${whitespace.base};
   right: ${whitespace.base};
-  width: 100px;
+  width: 120px;
   height: 120px;
-  // border-radius: ${borderradius.circle};
+  border-radius: ${borderradius.circle};
 `;
