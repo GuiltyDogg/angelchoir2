@@ -1,4 +1,4 @@
-import { EventBox, EventDiv, EventTitle } from "./styles";
+import { EventBox, EventDiv, EventImage, EventTitle } from "./styles";
 
 function Events() {
   const events = [
@@ -7,6 +7,7 @@ function Events() {
       title: "Sustenance, The Under the Moon Tour",
       location: "The Masquerade",
       date: "June 15, 2023",
+      time: "7PM - 10PM",
     },
     // SHOW MULTIPLE EVENTS
     // {
@@ -44,7 +45,9 @@ function Events() {
             <h2>{event.title}</h2>
             <p>Location: {event.location}</p>
             <p>Date: {event.date}</p>
+            <p>Time: {event.time}</p>
           </div>
+          <EventImage src="./images/sampleflyer.jpg" alt="Your Image" />
         </EventBox>
       ))}
     </EventDiv>

@@ -1,4 +1,4 @@
-import { OverlayPage, Window } from "./styles";
+import { Window } from "./styles";
 import { EventTitle } from "../../organisms/eventspage/styles";
 import { ButtonStyles } from "../button/styles";
 

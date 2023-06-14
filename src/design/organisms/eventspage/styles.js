@@ -13,6 +13,7 @@ export const EventTitle = styled.div`
 `;
 
 export const EventBox = styled.div`
+  position: relative;
   border: 2px solid ${colors.darkGray};
   padding-left: ${whitespace.base};
   font-family: ${fonts.font};
@@ -26,4 +27,13 @@ export const EventBox = styled.div`
 export const EventDiv = styled.div`
   background-color: ${colors.bgWhite};
   padding-bottom: ${whitespace.most};
+`;
+
+export const EventImage = styled.img`
+  position: absolute;
+  bottom: ${whitespace.base};
+  right: ${whitespace.base};
+  width: 100px;
+  height: 120px;
+  // border-radius: ${borderradius.circle};
 `;

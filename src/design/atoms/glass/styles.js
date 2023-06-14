@@ -3,25 +3,25 @@ import whitespace from "../../subatomics/whitespace";
 import fonts from "../../subatomics/fonts";
 import borderradius from "../../subatomics/borderradius";
 
-// export const OverlayPage = styled.div`
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// `;
-
 export const Window = styled.div`
   padding: ${whitespace.base};
   background-color: rgba(255, 255, 255, 0.5);
   display: flex;
-  flex: 0 1 auto;
   flex-direction: column;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
   height: 50%;
   border-radius: ${borderradius.most};
   text-align: center;
   font-family: ${fonts.font};
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+`;
+
+export const PageContainer = styled.div`
+  position: relative;
 `;
