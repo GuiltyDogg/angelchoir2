@@ -3,6 +3,7 @@ import ToolBar from "../../design/atoms/navbar";
 import StarBar from "../../design/atoms/starbar";
 import Events from "../../design/organisms/eventspage";
 import { PageContainer } from "../../design/atoms/glass/styles";
+import AlertGlass from "../../design/atoms/alertglass";
 
 function Eventlist() {
   return (
@@ -13,6 +14,7 @@ function Eventlist() {
         <StarBar />
       </PageContainer>
       {/* <GlassWindow></GlassWindow> */}
+      <AlertGlass />
     </>
   );
 }
