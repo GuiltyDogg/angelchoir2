@@ -28,6 +28,10 @@ export const Window = styled.div`
 export const GpsImage = styled.img`
   margin: ${whitespace.base};
   width: 200px;
-  height: 200px;
+  height: 205px;
   border-radius: ${borderradius.circle};
+`;
+
+export const CardContainer = styled.div`
+  position: relative;
 `;

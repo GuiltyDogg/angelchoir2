@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import Avatar from "../avatar";
 import StarBar from "../starbar";
-import { Window, GpsImage } from "./styles";
+import { Window, GpsImage, CardContainer } from "./styles";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
