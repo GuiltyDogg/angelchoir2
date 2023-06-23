@@ -27,8 +27,15 @@ export const Window = styled.div`
 
 export const GpsImage = styled.img`
   margin: ${whitespace.base};
-  width: 200px;
-  height: 205px;
+  width: 250px;
+  height: 250px;
+  border-radius: ${borderradius.circle};
+`;
+
+export const AlertImage = styled.img`
+  margin: ${whitespace.base};
+  width: 250px;
+  height: 250px;
   border-radius: ${borderradius.circle};
 `;
 

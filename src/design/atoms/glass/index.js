@@ -7,7 +7,7 @@ function GlassWindow() {
   return (
     <Window>
       <EventTitle>CHECK IN</EventTitle>
-      EVENT NAME
+      EVENT INFO
       <CheckInImage src="./images/sampleflyer.jpg" alt="Event Picture" />
       <ButtonStyles>CHECK IN</ButtonStyles>
     </Window>

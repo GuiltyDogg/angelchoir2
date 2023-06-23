@@ -5,8 +5,8 @@ import borderradius from "../../subatomics/borderradius";
 
 export const Window = styled.div`
   padding: ${whitespace.base};
-  // background-color: rgba(255, 255, 255, 0.8);
-  background-color: rgba(191, 135, 246, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
+  // background-color: rgba(191, 135, 246, 0.8);
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -23,7 +23,7 @@ export const Window = styled.div`
 `;
 
 export const CheckInImage = styled.img`
-  margin: ${whitespace.base};
+  margin: ${whitespace.most};
   width: 250px;
   height: 250px;
   border-radius: ${borderradius.circle};

@@ -1,7 +1,7 @@
 import Slider from "react-slick";
-import Avatar from "../avatar";
 import StarBar from "../starbar";
-import { Window, GpsImage, CardContainer } from "./styles";
+import { EventTitle } from "../../organisms/eventspage/styles";
+import { Window, GpsImage, CardContainer, AlertImage } from "./styles";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -18,14 +18,14 @@ function AlertGlass() {
       <Slider {...settings}>
         <div>
           <Window>
-            <h1>ALERT!</h1>
-            <Avatar />
+            <EventTitle>ALERT!</EventTitle>
+            <AlertImage src="./images/drew.png" alt="Alerting User" />
             <StarBar />
           </Window>
         </div>
         <div>
           <Window>
-            <h3>WTF</h3>
+            <EventTitle>WTF</EventTitle>
             <GpsImage src="./images/gps.png" alt="gps photo" />
             <StarBar />
           </Window>
