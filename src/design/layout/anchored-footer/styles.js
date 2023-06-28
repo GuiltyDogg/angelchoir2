@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import whitespace from "../../subatomics/whitespace";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -15,4 +16,5 @@ export const ScrollableWindow = styled.div`
 
 export const Footer = styled.footer`
   flex: 0 0 auto;
+  margin: 0 ${whitespace.more} ${whitespace.more} ${whitespace.more};
 `;

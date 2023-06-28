@@ -17,17 +17,15 @@ function Avatar({ selectedImage, setSelectedImage }) {
         accept="image/*"
         id="avatar-upload"
         onChange={handleImageUpload}
-        style={{ display: "none" }}
       />
-      <label htmlFor="avatar-upload">
+
+      {selectedImage ? (
+        <AvatarStyles style={{ backgroundImage: `url(${selectedImage})` }} />
+      ) : (
         <AvatarStyles>
-          {selectedImage ? (
-            <img src={selectedImage} alt="User Avatar" />
-          ) : (
-            <FontAwesomeIcon icon={faUser} />
-          )}
+          <FontAwesomeIcon icon={faUser} />
         </AvatarStyles>
-      </label>
+      )}
     </AvatarCircle>
   );
 }
