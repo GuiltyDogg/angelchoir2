@@ -6,9 +6,8 @@ import colors from "../../subatomics/colors";
 export const StyledInput = styled.input`
   box-sizing: border-box;
   display: block;
-  width: 100%;
   padding: ${whitespace.more};
-  margin: ${whitespace.more} 0;
+  margin: ${whitespace.more};
   border: ${colors.black};
   border-radius: ${borderradius.medium};
   background-color: ${colors.white};
