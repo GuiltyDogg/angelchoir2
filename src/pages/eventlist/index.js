@@ -13,7 +13,7 @@ function Eventlist() {
         <ToolBar />
         <Events />
         <StarBar />
-        {/* <AlertGlass /> */}
+        <AlertGlass />
       </PageContainer>
       {/* <GlassWindow></GlassWindow> */}
     </>
