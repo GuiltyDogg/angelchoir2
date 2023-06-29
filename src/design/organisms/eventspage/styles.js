@@ -19,8 +19,8 @@ export const EventBox = styled.div`
   background-color: ${colors.lightGray};
   border-radius: ${borderradius.most};
   margin-bottom: ${whitespace.base};
-  margin-left: ${whitespace.more};
-  margin-right: ${whitespace.most};
+  margin-left: ${whitespace.base};
+  margin-right: ${whitespace.base};
 `;
 
 export const EventDiv = styled.div`
