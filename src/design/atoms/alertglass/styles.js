@@ -9,9 +9,9 @@ export const Window = styled.div`
   padding: ${whitespace.most};
   background-color: rgba(255, 255, 255, 0.9);
   //   background-color: rgba(191, 135, 246, 0.9);
-  display: block;
+  display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100vw;
   align-items: center;
   height: 50%;
   border-radius: ${borderradius.most};
@@ -41,6 +41,6 @@ export const AlertImage = styled.img`
 
 export const CardContainer = styled.div`
   position: relative;
-  transform: translate(-50%, -50%);
-  margin-left: 100px;
+  transform: translate(0%, -50%);
+  margin: ${whitespace.base};
 `;

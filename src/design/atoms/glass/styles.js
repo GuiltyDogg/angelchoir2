@@ -9,7 +9,7 @@ export const Window = styled.div`
   // background-color: rgba(191, 135, 246, 0.8);
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100vw;
   align-items: center;
   height: 50%;
   border-radius: ${borderradius.most};
