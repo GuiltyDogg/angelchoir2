@@ -7,8 +7,8 @@ function App() {
   return (
     <ApplicationContent>
       {/* <Settings></Settings> */}
-      {/* <EventList></EventList> */}
-      <AlertPage></AlertPage>
+      <EventList></EventList>
+      {/* <AlertPage></AlertPage> */}
     </ApplicationContent>
   );
 }

@@ -14,7 +14,7 @@ function AlertGlass() {
     slidesToScroll: 1,
   };
   return (
-    <div>
+    <CardContainer>
       <Slider {...settings}>
         <div>
           <Window>
@@ -31,7 +31,7 @@ function AlertGlass() {
           </Window>
         </div>
       </Slider>
-    </div>
+    </CardContainer>
   );
 }
 

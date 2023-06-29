@@ -9,7 +9,7 @@ export const Window = styled.div`
   padding: ${whitespace.most};
   background-color: rgba(255, 255, 255, 0.9);
   //   background-color: rgba(191, 135, 246, 0.9);
-  display: flex;
+  display: block;
   flex-direction: column;
   width: 90%;
   align-items: center;
@@ -18,9 +18,9 @@ export const Window = styled.div`
   text-align: center;
   font-family: ${fonts.font};
   // position: absolute;
-  margin: auto;
-  top: 50%;
-  left: 50%;
+  // margin: auto;
+  // top: 50%;
+  // left: 50%;
   // transform: translate(-50%, -50%);
   // z-index: 9999;
 `;
@@ -41,4 +41,6 @@ export const AlertImage = styled.img`
 
 export const CardContainer = styled.div`
   position: relative;
+  transform: translate(-50%, -50%);
+  margin-left: 100px;
 `;
