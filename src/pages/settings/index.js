@@ -7,6 +7,7 @@ import TextBox from "../../design/atoms/textbox";
 import Input from "../../design/atoms/input";
 import AnchoredFooter from "../../design/layout/anchored-footer";
 import { useCallback } from "react";
+import { Link } from "react-router-dom";
 
 function Settings() {
   const [selectedImage, setSelectedImage] = useState(
@@ -68,12 +69,14 @@ function Settings() {
             setChecked={setChecked}
             label="Allow AngelChoir to use location?"
           ></Checkbox>
-          <Button
-            onClick={findEvents}
-            disabled={!userName || !checked || !(selectedImage || userInfo)}
-          >
-            Find Event
-          </Button>
+          <Link to="/Events">
+            <Button
+              onClick={findEvents}
+              disabled={!userName || !checked || !(selectedImage || userInfo)}
+            >
+              Find Event
+            </Button>
+          </Link>
         </>
       }
     />
