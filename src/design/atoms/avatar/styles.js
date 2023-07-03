@@ -10,7 +10,6 @@ export const AvatarCircle = styled.div`
   height: 25vh;
   max-height: 25vh;
   border-radius: ${borderradius.circle};
-  background: ${colors.primaryBrand};
   box-shadow: inset 21px -21px 42px #a265e0, inset -21px 21px 42px #c07aff;
   overflow: hidden;
   margin-left: auto;
