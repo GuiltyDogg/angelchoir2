@@ -8,14 +8,14 @@ export const EventTitle = styled.div`
   display: flex;
   justify-content: center;
   font-size: 50px;
-  font-family: ${fonts.font};
+  ${fonts.font};
 `;
 
 export const EventBox = styled.div`
   position: relative;
   border: 2px solid ${colors.darkGray};
   padding-left: ${whitespace.base};
-  font-family: ${fonts.font};
+  ${fonts.font};
   background-color: ${colors.lightGray};
   border-radius: ${borderradius.most};
   margin-bottom: ${whitespace.base};

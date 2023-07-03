@@ -16,7 +16,7 @@ export const Window = styled.div`
   height: 50%;
   border-radius: ${borderradius.most};
   text-align: center;
-  font-family: ${fonts.font};
+  ${fonts.font};
   // position: absolute;
   // margin: auto;
   // top: 50%;
