@@ -11,6 +11,11 @@ function ToolBar({ onClick }) {
   return (
     <StyledBar>
       <Link to="/Events">
+        <LogoNav
+          className="logo"
+          src="./images/aclogoangle.png"
+          alt="AngelChoir Logo"
+        />
         {/* <StyledTools>
           <FontAwesomeIcon icon={faCalendar} />
         </StyledTools> */}
@@ -20,17 +25,12 @@ function ToolBar({ onClick }) {
       {/* <StyledTools>
         <FontAwesomeIcon icon={faMagnifyingGlass} />
       </StyledTools> */}
-      <LogoNav
-        className="logo"
-        src="./images/aclogoangle.png"
-        alt="AngelChoir Logo"
-      />
 
-      <Link to="/Alerts">
-        {/* <StyledTools>
+      {/* <Link to="/Alerts">
+        <StyledTools>
           <FontAwesomeIcon icon={faBell} />
-        </StyledTools> */}
-      </Link>
+        </StyledTools>
+      </Link> */}
 
       <Link to="/">
         <StyledTools>
