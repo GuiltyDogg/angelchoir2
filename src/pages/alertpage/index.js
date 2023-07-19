@@ -16,7 +16,7 @@ function AlertPage() {
         <StarBar />
       </PageContainer>
       {/* <GlassWindow></GlassWindow> */}
-      {/* <AlertGlass /> */}
+      <AlertGlass />
     </>
   );
 }
