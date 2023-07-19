@@ -10,7 +10,6 @@ import AnchoredFooter from "../../design/layout/anchored-footer";
 function Eventlist() {
   return (
     <>
-
       <AnchoredFooter
         window={
           <>
