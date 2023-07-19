@@ -5,17 +5,23 @@ import Events from "../../design/organisms/eventspage";
 import { PageContainer } from "../../design/atoms/glass/styles";
 import { CardContainer } from "../../design/atoms/alertglass/styles";
 import AlertGlass from "../../design/atoms/alertglass";
+import AnchoredFooter from "../../design/layout/anchored-footer";
 
 function Eventlist() {
   return (
     <>
-      <PageContainer>
-        <ToolBar />
-        <Events />
-        <StarBar />
-        {/* <AlertGlass /> */}
-      </PageContainer>
-      {/* <GlassWindow></GlassWindow> */}
+
+      <AnchoredFooter
+        window={
+          <>
+            <ToolBar />
+            <Events />  
+          </>
+        }
+        footer={
+          <StarBar />
+        }
+      />
     </>
   );
 }

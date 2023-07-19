@@ -24,9 +24,6 @@ export const EventBox = styled.div`
 `;
 
 export const EventDiv = styled.div`
-  background-color: ${colors.bgWhite};
-  padding-bottom: ${whitespace.base};
-  width: 100%;
 `;
 
 export const EventImage = styled.img`
