@@ -8,7 +8,8 @@ export const LogoImage = styled.img`
 `;
 
 export const LogoNav = styled.img`
-  display: block;
+  display: flex;
+  padding-right: 250px;
   height: 40px;
   filter: brightness(0%);
 `;

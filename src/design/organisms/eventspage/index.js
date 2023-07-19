@@ -10,18 +10,18 @@ function Events() {
       time: "7PM - 10PM",
     },
     // SHOW MULTIPLE EVENTS
-    // {
-    //   id: 2,
-    //   title: "The Wiggles, and Friends",
-    //   location: "Drunken Unicorn",
-    //   date: "June 20, 2023",
-    // },
-    // {
-    //   id: 3,
-    //   title: "Feed Us Fetus Fajitas, Carcass Fuck, Smoking Dick",
-    //   location: "Not Sabbath Brewing",
-    //   date: "June 25, 2023",
-    // },
+    {
+      id: 2,
+      title: "The Wiggles, and Friends",
+      location: "Drunken Unicorn",
+      date: "June 20, 2023",
+    },
+    {
+      id: 3,
+      title: "Feed Us Fetus Fajitas, Carcass Fuck, Smoking Dick",
+      location: "Not Sabbath Brewing",
+      date: "June 25, 2023",
+    },
     // {
     //   id: 4,
     //   title: "Blue Man Group",

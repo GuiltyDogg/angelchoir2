@@ -11,21 +11,25 @@ function ToolBar({ onClick }) {
   return (
     <StyledBar>
       <Link to="/Events">
-        <StyledTools>
+        {/* <StyledTools>
           <FontAwesomeIcon icon={faCalendar} />
-        </StyledTools>
+        </StyledTools> */}
       </Link>
 
       {/* I think we don't need this/we should move this feature to the events page? */}
-      <StyledTools>
+      {/* <StyledTools>
         <FontAwesomeIcon icon={faMagnifyingGlass} />
-      </StyledTools>
-      <LogoNav src="./images/aclogoangle.png" alt="AngelChoir Logo" />
+      </StyledTools> */}
+      <LogoNav
+        className="logo"
+        src="./images/aclogoangle.png"
+        alt="AngelChoir Logo"
+      />
 
       <Link to="/Alerts">
-        <StyledTools>
+        {/* <StyledTools>
           <FontAwesomeIcon icon={faBell} />
-        </StyledTools>
+        </StyledTools> */}
       </Link>
 
       <Link to="/">
