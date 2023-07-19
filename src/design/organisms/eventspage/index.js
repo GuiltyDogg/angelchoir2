@@ -22,18 +22,18 @@ function Events() {
       location: "Not Sabbath Brewing",
       date: "June 25, 2023",
     },
-    // {
-    //   id: 4,
-    //   title: "Blue Man Group",
-    //   location: "Aaron's Ampitheatre",
-    //   date: "June 29, 2023",
-    // },
-    // {
-    //   id: 5,
-    //   title: "Pathos",
-    //   location: "Swayze's",
-    //   date: "July 12, 2023",
-    // },
+    {
+      id: 4,
+      title: "Blue Man Group",
+      location: "Aaron's Ampitheatre",
+      date: "June 29, 2023",
+    },
+    {
+      id: 5,
+      title: "Pathos",
+      location: "Swayze's",
+      date: "July 12, 2023",
+    },
   ];
 
   return (
