@@ -15,8 +15,9 @@ function AlertPage() {
         <AlertList />
         <StarBar />
       </PageContainer>
+      {/* Nuking the alert/check in pop up cards */}
       {/* <GlassWindow></GlassWindow> */}
-      <AlertGlass />
+      {/* <AlertGlass /> */}
     </>
   );
 }

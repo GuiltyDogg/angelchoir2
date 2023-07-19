@@ -18,7 +18,7 @@ function Events() {
     },
     {
       id: 3,
-      title: "Feed Us Fetus Fajitas, Carcass Fuck, Smoking Dick",
+      title: "Taylor Swift",
       location: "Not Sabbath Brewing",
       date: "June 25, 2023",
     },
