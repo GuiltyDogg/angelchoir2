@@ -11,12 +11,22 @@ function StarBar({ onClick }) {
     <>
       <StarStyle>
         <Link to="/Alerts">
+          <StyledTools>
           <FontAwesomeIcon icon={faBell} />
+          </StyledTools>
         </Link>
         <div>
-          <FontAwesomeIcon onClick={onClick} icon={faStar} />
-          <FontAwesomeIcon onClick={onClick} icon={faStar} />
-          <FontAwesomeIcon onClick={onClick} icon={faStar} />
+          <StyledTools>
+            <FontAwesomeIcon onClick={onClick} icon={faStar} />
+          </StyledTools>
+
+          <StyledTools>
+            <FontAwesomeIcon onClick={onClick} icon={faStar} />
+          </StyledTools>
+
+          <StyledTools>
+            <FontAwesomeIcon onClick={onClick} icon={faStar} />
+          </StyledTools>
         </div>
       </StarStyle>
     </>
