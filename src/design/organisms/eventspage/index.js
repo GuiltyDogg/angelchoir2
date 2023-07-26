@@ -1,6 +1,6 @@
 import { EventBox, EventDiv, EventImage, EventTitle } from "./styles";
 
-function Events() {
+function Events({ onClick }) {
   const events = [
     {
       id: 1,

@@ -46,16 +46,13 @@ function AlertList() {
     <EventDiv>
       <EventTitle>ALERTS</EventTitle>
       {events.map((event) => (
-        <EventBox>
-          <div key={event.id}>
-            <h2>{event.title}</h2>
-            <p>User: {event.username}</p>
-            <p>Location: {event.location}</p>
-            <p>Date: {event.date}</p>
-            <p>Time Alerted: {event.time}</p>
-          </div>
-          <EventImage src="./images/drew.png" alt="Your Image" />
-        </EventBox>
+        <div key={event.id}>
+          <h2>{event.title}</h2>
+          <p>User: {event.username}</p>
+          <p>Location: {event.location}</p>
+          <p>Date: {event.date}</p>
+          <p>Time Alerted: {event.time}</p>
+        </div>
       ))}
     </EventDiv>
   );
