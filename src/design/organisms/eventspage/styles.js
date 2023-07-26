@@ -37,6 +37,7 @@ export const EventImage = styled.img`
   max-width: 94vw;
   border-radius: ${borderradius.most};
   margin-bottom: ${whitespace.base};
+  filter: drop-shadow(4px 4px 5px ${colors.slateGray});
   &:active {
     filter: blur(4px);
 `;
