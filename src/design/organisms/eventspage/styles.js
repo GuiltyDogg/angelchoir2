@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import styled from "styled-components";
 import colors from "../../subatomics/colors";
 import whitespace from "../../subatomics/whitespace";
@@ -10,20 +11,13 @@ export const EventTitle = styled.div`
   font-size: 50px;
 `;
 
-// export const EventBox = styled.div`
-//   position: relative;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   border: 2px solid ${colors.darkGray};
-//   // padding-left: ${whitespace.base};
-//   background-color: ${colors.lightGray};
-//   border-radius: ${borderradius.most};
-//   margin-bottom: ${whitespace.base};
-//   margin-left: ${whitespace.base};
-//   margin-right: ${whitespace.base};
-// `;
+const BlurredImage = styled.img`
+  max-width: 94vw;
+  border-radius: ${borderradius.most};
+  margin-bottom: ${whitespace.base};
+  filter: ${(props) => (props.isBlurred ? "blur(4px)" : "none")};
+  cursor: pointer;
+`;
 
 export const EventDiv = styled.div`
   display: flex;
@@ -33,10 +27,21 @@ export const EventDiv = styled.div`
   background-color: ${colors.lightGray};
 `;
 
-export const EventImage = styled.img`
-  max-width: 94vw;
-  border-radius: ${borderradius.most};
-  margin-bottom: ${whitespace.base};
-  &:active {
-    filter: blur(4px);
-`;
+export const EventImage = ({ imageUrl = "/images/sampleflyer.jpg" }) => {
+  const [isBlurred, setIsBlurred] = useState(false);
+
+  const toggleBlur = () => {
+    setIsBlurred(!isBlurred);
+  };
+
+  return (
+    <div>
+      <BlurredImage
+        src={(imageUrl = "/images/sampleflyer.jpg")}
+        alt="Event Image"
+        isBlurred={isBlurred}
+        onClick={toggleBlur}
+      />
+    </div>
+  );
+};
