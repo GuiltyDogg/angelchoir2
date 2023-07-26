@@ -6,20 +6,21 @@ import { faBell } from "@fortawesome/free-regular-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { LogoNav } from "../logo/styles";
 import { Link } from "react-router-dom";
+import { EventTitle } from "../../organisms/eventspage/styles";
 
 function ToolBar({ onClick }) {
   return (
     <StyledBar>
       <Link to="/Events">
-      <StyledTools>
-        <LogoNav
-          className="logo"
-          src="./images/aclogoangle.png"
-          alt="AngelChoir Logo"
-        />
-                </StyledTools>
+        <StyledTools>
+          <LogoNav
+            className="logo"
+            src="./images/aclogoangle.png"
+            alt="AngelChoir Logo"
+          />
+        </StyledTools>
       </Link>
-
+      <EventTitle>EVENTS</EventTitle>
       <Link to="/">
         <StyledTools>
           <FontAwesomeIcon icon={faUser} />

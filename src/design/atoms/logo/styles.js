@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import whitespace from "../../subatomics/whitespace";
 
 export const LogoImage = styled.img`
   display: block;
@@ -11,5 +12,8 @@ export const LogoNav = styled.img`
   display: flex;
   height: 40px;
   filter: brightness(0%);
-  margin-left: -15px;
+  margin-left: -20px;
+  // background: green;
+  margin-right: -30px;
+  padding-left: ${whitespace.base};
 `;
