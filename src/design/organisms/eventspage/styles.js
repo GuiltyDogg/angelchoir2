@@ -73,16 +73,23 @@ const BlurredImage = styled.img`
   cursor: pointer;
 `;
 
+const EventImageContainer = styled.div`
+  position: relative;
+`;
+
 const EventInfoContainer = styled.div`
   position: absolute;
-  width: 94vw;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: #fff;
   opacity: ${(props) => (props.showInfo ? 1 : 0)};
+  pointer-events: ${(props) => (props.showInfo ? "auto" : "none")};
   transition: opacity 0.3s ease;
 `;
 
@@ -110,10 +117,11 @@ export const EventImage = ({ imageUrl = "/images/sampleflyer.jpg" }) => {
 
   const toggleInfo = () => {
     setShowInfo((prevShowInfo) => !prevShowInfo);
+    setIsBlurred(true); // ISSUE HERE
   };
 
   return (
-    <div>
+    <EventImageContainer>
       <BlurredImage
         src={imageUrl}
         alt="Event Image"
@@ -121,18 +129,17 @@ export const EventImage = ({ imageUrl = "/images/sampleflyer.jpg" }) => {
         onClick={() => {
           toggleBlur();
           toggleInfo();
-  
         }}
       />
-      <EventInfoContainer showInfo={showInfo}>
+      <EventInfoContainer showInfo={showInfo} onClick={toggleInfo}>
         <EventInfo>
-          {/* pull event information here */}
+          {/* Render the event information here */}
           <p>Title: Your Event Title</p>
           <p>Location: Event Location</p>
           <p>Date: Event Date</p>
           <p>Time: Event Time</p>
         </EventInfo>
       </EventInfoContainer>
-    </div>
+    </EventImageContainer>
   );
 };
