@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import styled from "styled-components";
 import colors from "../../subatomics/colors";
@@ -52,7 +50,7 @@ export const EventDiv = styled.div`
   justify-content: center;
   align-items: center;
   background-color: ${colors.lightGray};
-  position: relative; /* NEEDS TO BE SOMEWHERE ELSE */
+  position: relative; 
 `;
 
 export const EventImage = ({ imageUrl = "/images/sampleflyer.jpg" }) => {
@@ -60,7 +58,7 @@ export const EventImage = ({ imageUrl = "/images/sampleflyer.jpg" }) => {
   const [showInfo, setShowInfo] = useState(false);
 
   const toggleBlur = () => {
-    setIsBlurred(!isBlurred);
+    setIsBlurred(false);
   };
 
   const toggleInfo = () => {
