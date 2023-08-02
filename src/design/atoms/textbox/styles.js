@@ -14,4 +14,5 @@ export const StyledTextBox = styled.textarea`
   border-radius: ${borderradius.medium};
   background-color: ${colors.white};
   flex: 1 1 100%;
+  resize: none;
 `;

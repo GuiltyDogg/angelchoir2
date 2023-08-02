@@ -53,6 +53,7 @@ function Settings() {
             }}
           ></Input>
           <TextBox
+            textarea={"resize:none"}
             placeholder="Additonal User Info (Optional)"
             value={userInfo}
             onChange={(e) => {
