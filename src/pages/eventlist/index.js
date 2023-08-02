@@ -11,14 +11,11 @@ function Eventlist() {
   return (
     <>
       <AnchoredFooter
+        header={<ToolBar />}
         window={
           <>
-            <ToolBar />
-            <Events />  
+            <Events />
           </>
-        }
-        footer={
-          <StarBar />
         }
       />
     </>

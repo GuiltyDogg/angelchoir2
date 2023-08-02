@@ -1,4 +1,5 @@
-import { EventBox, EventDiv, EventImage, EventTitle } from "./styles";
+import { EventBox, EventDiv, EventTitle } from "./styles";
+import EventImage from "../eventimage";
 
 function Events({ onClick }) {
   const events = [
@@ -8,7 +9,7 @@ function Events({ onClick }) {
       location: "The Masquerade",
       date: "June 15, 2023",
       time: "7PM - 10PM",
-      imageSrc: "./images/sampleflyer1.jpg",
+      imageSrc: "./images/sampleflyer.jpg",
     },
     // SHOW MULTIPLE EVENTS
     {
@@ -16,7 +17,7 @@ function Events({ onClick }) {
       title: "The Wiggles, and Friends",
       location: "Drunken Unicorn",
       date: "June 20, 2023",
-      imageSrc: "./images/sampleflyer1.jpg",
+      imageSrc: "/images/sampleflyer.jpg",
     },
     // {
     //   id: 3,
@@ -40,19 +41,17 @@ function Events({ onClick }) {
 
   return (
     <EventDiv>
-      <EventTitle>EVENTS</EventTitle>
       {events.map((event) => (
         <EventImage
           onClick={onClick}
           key={event.id}
           src="./images/sampleflyer.jpg"
           alt="Your Image"
+          event={event}
         />
       ))}
     </EventDiv>
   );
 }
-
-
 
 export default Events;

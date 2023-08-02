@@ -18,3 +18,7 @@ export const Footer = styled.footer`
   flex: 0 0 auto;
   margin: ${whitespace.more};
 `;
+
+export const Header = styled.header`
+  flex: 0 0 auto;
+`;

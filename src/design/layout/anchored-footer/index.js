@@ -1,15 +1,13 @@
-import { Wrapper, ScrollableWindow, Footer } from "./styles";
+import { Wrapper, ScrollableWindow, Footer, Header } from "./styles";
 
-function AnchoredFooter({
-  window,
-  footer
-}) {
+function AnchoredFooter({ window, footer, header }) {
   return (
     <Wrapper>
-      <ScrollableWindow>{ window }</ScrollableWindow>
-      <Footer>{ footer }</Footer>
+      {!!header && <Header>{header}</Header>}
+      {!!window && <ScrollableWindow>{window}</ScrollableWindow>}
+      {!!footer && <Footer>{footer}</Footer>}
     </Wrapper>
   );
-};
+}
 
 export default AnchoredFooter;
