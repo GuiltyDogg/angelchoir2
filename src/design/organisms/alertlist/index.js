@@ -3,7 +3,7 @@ import {
   EventDiv,
   EventImage,
   EventTitle,
-} from "../../organisms/eventspage/styles";
+} from "../eventscroll/styles";
 
 function AlertList() {
   const events = [

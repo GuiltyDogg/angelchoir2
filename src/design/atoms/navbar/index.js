@@ -6,7 +6,7 @@ import { faBell } from "@fortawesome/free-regular-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { LogoNav } from "../logo/styles";
 import { Link } from "react-router-dom";
-import { EventTitle } from "../../organisms/eventspage/styles";
+import { EventTitle } from "../../organisms/eventscroll/styles";
 
 function ToolBar({ onClick }) {
   return (

@@ -6,20 +6,18 @@ import { PageContainer } from "../../design/atoms/glass/styles";
 import { CardContainer } from "../../design/atoms/alertglass/styles";
 import AlertGlass from "../../design/atoms/alertglass";
 import AnchoredFooter from "../../design/layout/anchored-footer";
+import EventImage from "../../design/organisms/eventimage";
 
-function Eventlist() {
+function EventDetails() {
   return (
     <>
       <AnchoredFooter
         header={<ToolBar />}
-        window={
-          <>
-            <Events />
-          </>
-        }
+        window={<>event detail pages</>}
+        footer={<StarBar />}
       />
     </>
   );
 }
 
-export default Eventlist;
+export default EventDetails;

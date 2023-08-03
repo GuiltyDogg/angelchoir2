@@ -1,5 +1,5 @@
 import { Window } from "./styles";
-import { EventTitle } from "../../organisms/eventspage/styles";
+import { EventTitle } from "../../organisms/eventscroll/styles";
 import { ButtonStyles } from "../button/styles";
 import { CheckInImage } from "./styles";
 

@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 import StarBar from "../starbar";
-import { EventTitle } from "../../organisms/eventspage/styles";
+import { EventTitle } from "../../organisms/eventscroll/styles";
 import { Window, GpsImage, CardContainer, AlertImage } from "./styles";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

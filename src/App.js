@@ -1,7 +1,8 @@
 import Settings from "./pages/settings";
 import EventList from "./pages/eventlist";
 import AlertPage from "./pages/alertpage";
-import Events from "./design/organisms/eventspage";
+import Events from "./design/organisms/eventscroll";
+import EventDetails from "./pages/eventdetails";
 import ApplicationContent from "./design/application/content";
 import { Route, Routes } from "react-router-dom";
 
@@ -13,6 +14,7 @@ function App() {
         <Route path="/Events" element={<EventList></EventList>} />
         <Route path="/Alerts" element={<AlertPage></AlertPage>} />
         <Route path="/Events" element={<Events></Events>} />
+        <Route path="/EventDetails" element={<EventDetails></EventDetails>} />
       </Routes>
     </ApplicationContent>
   );

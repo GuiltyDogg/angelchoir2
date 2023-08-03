@@ -7,6 +7,7 @@ import {
 } from "./styles";
 import Button from "../../atoms/button";
 import { InfoTitle, InfoKey, InfoValue } from "./styles";
+import { Link } from "react-router-dom";
 
 export const EventImage = ({ event }) => {
   const [isBlurred, setIsBlurred] = useState(false);
@@ -49,7 +50,9 @@ export const EventImage = ({ event }) => {
 
           <InfoValue>{event.time}</InfoValue>
           <InfoKey>Time</InfoKey>
-          <Button>Check In</Button>
+          <Link to="/EventDetails">
+            <Button>Check In</Button>
+          </Link>
         </EventInfo>
       </EventInfoContainer>
     </EventImageContainer>
