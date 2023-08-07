@@ -7,13 +7,15 @@ import { CardContainer } from "../../design/atoms/alertglass/styles";
 import AlertGlass from "../../design/atoms/alertglass";
 import AnchoredFooter from "../../design/layout/anchored-footer";
 import EventImage from "../../design/organisms/eventimage";
+import { DetailContainer } from "../../design/atoms/detailimage/styles";
+import DetailPageImage from "../../design/atoms/detailimage";
 
 function EventDetails() {
   return (
     <>
       <AnchoredFooter
         header={<ToolBar />}
-        window={<>event detail pages</>}
+        window={<DetailPageImage />}
         footer={<StarBar />}
       />
     </>

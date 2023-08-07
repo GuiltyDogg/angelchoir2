@@ -48,6 +48,8 @@ export const EventInfo = styled.div`
 
 export const InfoTitle = styled.div`
   font-weight: bold;
+  display: flex;
+  justify-content: center;
   font-size: 28px;
   padding-left: ${whitespace.base};
   padding-right: ${whitespace.base};
@@ -56,6 +58,8 @@ export const InfoTitle = styled.div`
 
 export const InfoKey = styled.div`
   font-weight: 800;
+  display: flex;
+  justify-content: center;
   margin-bottom: ${whitespace.base};
   text-transform: uppercase;
   letter-spacing: 1px;
