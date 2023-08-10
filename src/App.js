@@ -13,8 +13,8 @@ function App() {
         <Route path="/" element={<Settings></Settings>} />
         <Route path="/Events" element={<EventList></EventList>} />
         <Route path="/Alerts" element={<AlertPage></AlertPage>} />
+        <Route path="/Events/:id" element={<EventDetails></EventDetails>} />
         <Route path="/Events" element={<Events></Events>} />
-        <Route path="/EventDetails" element={<EventDetails></EventDetails>} />
       </Routes>
     </ApplicationContent>
   );

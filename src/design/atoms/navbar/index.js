@@ -15,7 +15,7 @@ function ToolBar({ onClick }) {
         <StyledTools>
           <LogoNav
             className="logo"
-            src="./images/aclogoangle.png"
+            src="/images/aclogoangle.png"
             alt="AngelChoir Logo"
           />
         </StyledTools>

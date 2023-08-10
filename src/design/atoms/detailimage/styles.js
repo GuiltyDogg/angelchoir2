@@ -16,11 +16,10 @@ export const DetailContainer = styled.div`
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background: green;
+  text-align: center;
 `;
 
 export const DetailInfo = styled.div`
-  background: red;
 `;
 
 export const DetailTitle = styled.div`

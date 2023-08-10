@@ -50,7 +50,7 @@ export const EventImage = ({ event }) => {
 
           <InfoValue>{event.time}</InfoValue>
           <InfoKey>Time</InfoKey>
-          <Link to="/EventDetails">
+          <Link to={`/Events/${event.id}`}>
             <Button>Check In</Button>
           </Link>
         </EventInfo>

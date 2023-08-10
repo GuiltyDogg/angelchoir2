@@ -17,35 +17,41 @@ function useEvents() {
         date: "June 20, 2023",
         imageSrc: "/images/sampleflyer.jpg",
       },
-      // {
-      //   id: 3,
-      //   title: "Taylor Swift",
-      //   location: "Not Sabbath Brewing",
-      //   date: "June 25, 2023",
-      // },
-      // {
-      //   id: 4,
-      //   title: "Blue Man Group",
-      //   location: "Aaron's Ampitheatre",
-      //   date: "June 29, 2023",
-      // },
-      // {
-      //   id: 5,
-      //   title: "Pathos",
-      //   location: "Swayze's",
-      //   date: "July 12, 2023",
-      // },
+      {
+        id: 3,
+        title: "Taylor Swift",
+        location: "Not Sabbath Brewing",
+        date: "June 25, 2023",
+        imageSrc: "/images/sampleflyer.jpg",
+
+      },
+      {
+        id: 4,
+        title: "Blue Man Group",
+        location: "Aaron's Ampitheatre",
+        date: "June 29, 2023",
+        imageSrc: "/images/sampleflyer.jpg",
+
+      },
+      {
+        id: 5,
+        title: "Pathos",
+        location: "Swayze's",
+        date: "July 12, 2023",
+        imageSrc: "/images/sampleflyer.jpg",
+
+      },
     ];
 
-    if (id){
-      events.find(id) => {
-        
-      }
-    } else{
-return events;
-    }; 
+    const eventMatch = (event) => {
+      return id === event.id;
+    };
 
-    return events;
+    if (!!id){
+      return events.find(eventMatch);
+    } else{
+      return events;
+    }; 
   };
 
   return getEvents;
