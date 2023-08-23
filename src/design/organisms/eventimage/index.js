@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import {
   EventImageContainer,
   EventInfoContainer,
@@ -8,22 +8,17 @@ import {
 import Button from "../../atoms/button";
 import { InfoTitle, InfoKey, InfoValue } from "./styles";
 import { Link } from "react-router-dom";
+import Context from "../../../state/context/eventsContext";
 
 export const EventImage = ({ event }) => {
-  const [isBlurred, setIsBlurred] = useState(false);
-  const [showInfo, setShowInfo] = useState(false);
-
-  const toggleBlur = () => {
-    setIsBlurred(false);
-  };
+  const { isBlurred, setIsBlurred } = useContext(Context);
 
   const toggleInfo = () => {
-    if (!showInfo) {
-      setIsBlurred(true);
+    if (isBlurred === null) {
+      setIsBlurred(event.id);
     } else {
-      setIsBlurred(false);
+      setIsBlurred(null);
     }
-    setShowInfo((prevShowInfo) => !prevShowInfo);
   };
 
   return (
@@ -31,13 +26,15 @@ export const EventImage = ({ event }) => {
       <BlurredImage
         src={event.imageSrc}
         alt="Event Image"
-        isBlurred={isBlurred}
+        isBlurred={isBlurred === event.id}
         onClick={() => {
-          toggleBlur();
           toggleInfo();
         }}
       />
-      <EventInfoContainer showInfo={showInfo} onClick={toggleInfo}>
+      <EventInfoContainer
+        showInfo={isBlurred === event.id}
+        onClick={toggleInfo}
+      >
         <EventInfo>
           {/* Render the event information here */}
           <InfoTitle>{event.title}</InfoTitle>
