@@ -19,8 +19,7 @@ export const DetailContainer = styled.div`
   text-align: center;
 `;
 
-export const DetailInfo = styled.div`
-`;
+export const DetailInfo = styled.div``;
 
 export const DetailTitle = styled.div`
   font-weight: bold;
