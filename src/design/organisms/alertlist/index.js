@@ -7,9 +7,6 @@ import {
 } from "../eventscroll/styles";
 
 function AlertList() {
-  const formattedDate = DateTime.fromISO(event.date).toLocaleString(
-    DateTime.DATETIME_SHORT
-  );
   const events = [
     {
       id: 1,
@@ -25,7 +22,6 @@ function AlertList() {
       title: "STAR LEVEL HERE MAYBE IDK",
       username: "PimpCoatGuy",
       location: "The Masquerade",
-      date: "June 15, 2023",
       time: "2023-08-08T19:49:43.416Z",
     },
     {
@@ -33,7 +29,6 @@ function AlertList() {
       title: "STAR LEVEL HERE MAYBE IDK",
       username: "BVLLER",
       location: "The Masquerade",
-      date: "June 15, 2023",
       time: "2023-08-08T20:49:43.416Z",
     },
     {
@@ -41,21 +36,31 @@ function AlertList() {
       title: "STAR LEVEL HERE MAYBE IDK",
       username: "RunningOutOfUsernameIdeas",
       location: "The Masquerade",
-      date: "June 15, 2023",
       time: "2023-08-08T21:49:43.416Z",
     },
   ];
 
   return (
     <EventDiv>
-      {events.map((event) => (
-        <div key={event.id}>
-          <h2>{event.title}</h2>
-          <p>User: {event.username}</p>
+      {events.map((event) => {
 
-          <p>Time Alerted: {formattedDate}</p>
-        </div>
-      ))}
+        const formattedDate = DateTime.fromISO(event.time).toLocaleString(
+          DateTime.DATETIME_SHORT
+        );
+
+
+
+
+        return (
+          <div key={event.id}>
+            <h2>{event.title}</h2>
+            <p>User: {event.username}</p>
+
+            <p>Time Alerted: {formattedDate}</p>
+          </div>
+        )
+      }
+      )}
     </EventDiv>
   );
 }
