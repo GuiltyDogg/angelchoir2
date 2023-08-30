@@ -8,19 +8,23 @@ import {
   DetailValue,
   DetailInfo,
 } from "./styles";
+import { DateTime } from "luxon";
 
 function DetailPageImage() {
-
   const params = useParams();
 
-  console.log(params)
+  console.log(params);
 
   const getEvents = useEvents();
   const event = getEvents(parseInt(params.id));
 
   if (!event) {
-    <></>
+    <></>;
   }
+
+  const formattedDate = DateTime.fromISO(event.date).toLocaleString(
+    DateTime.DATE_SHORT
+  );
 
   return (
     <DetailContainer>
@@ -31,16 +35,15 @@ function DetailPageImage() {
         <DetailValue>{event?.location}</DetailValue>
         <DetailKey>Location</DetailKey>
 
-        <DetailValue>{event?.date}</DetailValue>
+        <DetailValue>{formattedDate}</DetailValue>
         <DetailKey>Date</DetailKey>
 
-        {
-          event?.time &&
+        {event?.time && (
           <>
             <DetailValue>{event?.time}</DetailValue>
             <DetailKey>Time</DetailKey>
-          </>          
-        }
+          </>
+        )}
       </DetailInfo>
     </DetailContainer>
   );
