@@ -11,7 +11,7 @@ function Eventlist() {
   return (
     <>
       <AnchoredFooter
-        header={<ToolBar />}
+        header={<ToolBar title={"EVENTS"} />}
         window={
           <>
             <Events />

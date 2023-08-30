@@ -5,7 +5,7 @@ function useEvents() {
         id: 1,
         title: "Sustenance, The Under the Moon Tour",
         location: "The Masquerade",
-        date: "June 15, 2023",
+        date: "2023-08-08T18:49:43.416Z",
         time: "7PM - 10PM",
         imageSrc: "./images/sampleflyer.jpg",
       },
@@ -14,32 +14,29 @@ function useEvents() {
         id: 2,
         title: "The Wiggles, and Friends",
         location: "Drunken Unicorn",
-        date: "June 20, 2023",
+        date: "2023-08-08T18:49:43.416Z",
         imageSrc: "/images/sampleflyer.jpg",
       },
       {
         id: 3,
         title: "Taylor Swift",
         location: "Not Sabbath Brewing",
-        date: "June 25, 2023",
+        date: "2023-08-08T18:49:43.416Z",
         imageSrc: "/images/sampleflyer.jpg",
-
       },
       {
         id: 4,
         title: "Blue Man Group",
         location: "Aaron's Ampitheatre",
-        date: "June 29, 2023",
+        date: "2023-08-08T18:49:43.416Z",
         imageSrc: "/images/sampleflyer.jpg",
-
       },
       {
         id: 5,
         title: "Pathos",
         location: "Swayze's",
-        date: "July 12, 2023",
+        date: "2023-08-08T18:49:43.416Z",
         imageSrc: "/images/sampleflyer.jpg",
-
       },
     ];
 
@@ -47,11 +44,11 @@ function useEvents() {
       return id === event.id;
     };
 
-    if (!!id){
+    if (!!id) {
       return events.find(eventMatch);
-    } else{
+    } else {
       return events;
-    }; 
+    }
   };
 
   return getEvents;

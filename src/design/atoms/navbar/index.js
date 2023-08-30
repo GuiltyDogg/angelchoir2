@@ -8,7 +8,7 @@ import { LogoNav } from "../logo/styles";
 import { Link } from "react-router-dom";
 import { EventTitle } from "../../organisms/eventscroll/styles";
 
-function ToolBar({ onClick }) {
+function ToolBar({ onClick, title }) {
   return (
     <StyledBar>
       <Link to="/Events">
@@ -20,7 +20,7 @@ function ToolBar({ onClick }) {
           />
         </StyledTools>
       </Link>
-      <EventTitle>EVENTS</EventTitle>
+      <EventTitle>{title}</EventTitle>
       <Link to="/">
         <StyledTools>
           <FontAwesomeIcon icon={faUser} />
