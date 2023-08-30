@@ -13,10 +13,8 @@ function AlertList() {
       title: "STAR LEVEL HERE MAYBE IDK",
       username: "Not Drew",
       location: "The Masquerade",
-
       time: "2023-08-08T18:49:43.416Z",
     },
-    // SHOW MULTIPLE ALERTS
     {
       id: 2,
       title: "STAR LEVEL HERE MAYBE IDK",
@@ -40,16 +38,14 @@ function AlertList() {
     },
   ];
 
+  const milliseconds = events.sort();
+
   return (
     <EventDiv>
       {events.map((event) => {
-
         const formattedDate = DateTime.fromISO(event.time).toLocaleString(
           DateTime.DATETIME_SHORT
         );
-
-
-
 
         return (
           <div key={event.id}>
@@ -58,9 +54,8 @@ function AlertList() {
 
             <p>Time Alerted: {formattedDate}</p>
           </div>
-        )
-      }
-      )}
+        );
+      })}
     </EventDiv>
   );
 }
