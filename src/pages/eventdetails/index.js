@@ -9,14 +9,21 @@ import AnchoredFooter from "../../design/layout/anchored-footer";
 import EventImage from "../../design/organisms/eventimage";
 import { DetailContainer } from "../../design/atoms/detailimage/styles";
 import DetailPageImage from "../../design/atoms/detailimage";
+import { useState } from "react";
 
 function EventDetails() {
+  const [alert, setAlert] = useState(0);
+  const handleStarClick = (clickedStar) => {
+    const newAlert = clickedStar + 1;
+    setAlert(newAlert);
+  };
+
   return (
     <>
       <AnchoredFooter
         header={<ToolBar />}
         window={<DetailPageImage />}
-        footer={<StarBar />}
+        footer={<StarBar onClick={handleStarClick} />}
       />
     </>
   );
