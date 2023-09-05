@@ -3,11 +3,13 @@ import { AvatarCircle, AvatarStyles } from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
-function Avatar({ selectedImage, setSelectedImage }) {
+function Avatar({ selectedImage, setSelectedImage, disableUpload }) {
   const handleImageUpload = (event) => {
-    const file = event.target.files[0];
-    const imageUrl = URL.createObjectURL(file);
-    setSelectedImage(imageUrl);
+    if (!disableUpload) {
+      const file = event.target.files[0];
+      const imageUrl = URL.createObjectURL(file);
+      setSelectedImage(imageUrl);
+    }
   };
 
   return (
@@ -17,6 +19,7 @@ function Avatar({ selectedImage, setSelectedImage }) {
         accept="image/*"
         id="avatar-upload"
         onChange={handleImageUpload}
+        disabled={disableUpload}
       />
 
       {selectedImage ? (

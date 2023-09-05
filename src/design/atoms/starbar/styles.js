@@ -7,11 +7,15 @@ export const StarStyle = styled.div`
   font-size: 30px;
   background-color: ${colors.primaryBrand};
   color: black;
-  border: solid 2px black;
+  // border: solid 2px black;
 
   > div {
     display: flex;
     gap: 40px;
     align-items: center;
+  }
+
+  .filled-star {
+    color: gold;
   }
 `;

@@ -1,10 +1,12 @@
 import { DateTime } from "luxon";
+import Avatar from "../../atoms/avatar";
 import {
   EventBox,
   EventDiv,
   EventImage,
   EventTitle,
 } from "../eventscroll/styles";
+import StarBar from "../../atoms/starbar";
 
 function AlertList() {
   const events = [
@@ -49,9 +51,13 @@ function AlertList() {
 
         return (
           <div key={event.id}>
-            <h2>{event.title}</h2>
+            <div>
+              <Avatar disableUpload={true} />
+            </div>
+            <div>
+              <StarBar />
+            </div>
             <p>User: {event.username}</p>
-
             <p>Time Alerted: {formattedDate}</p>
           </div>
         );
