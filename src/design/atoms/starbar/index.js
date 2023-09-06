@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useCallback } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
@@ -12,7 +12,10 @@ import Button from "../button";
 import { ButtonStyles } from "../starbar/styles";
 
 function StarBar({ onClick }) {
-  const [starState, setStarState] = useState([false, false, false]);
+  const defaultStarState = [false, false, false]
+
+  const [starState, setStarState] = useState(defaultStarState);
+  const [description, setDescription] = useState('');
 
   const toggleStar = (index) => {
     const newStarState = starState.map((filled, i) =>
@@ -26,13 +29,29 @@ function StarBar({ onClick }) {
     return starState.find(s => s);
   }, [starState]);
 
+  const cancel = useCallback(() => {
+    setStarState(defaultStarState)
+  }, [
+    defaultStarState
+  ]);
+
+  const submit = useCallback(() => {
+    console.log('submit', starState.filter(s => s).length, description);    
+  }, [
+    starState,
+    description
+  ]);
+
   return (
     <>
       <StarStyle>
-        <Link to="/Alerts">
-          <StyledTools>
-            <FontAwesomeIcon icon={faBell} />
-          </StyledTools>
+      <Link to="/Alerts">
+        { !starSelected &&
+                  <StyledTools>
+                  <FontAwesomeIcon icon={faBell} />
+                </StyledTools>
+      
+        }
         </Link>
         <div>
           {starState.map((starFilled, index) => (
@@ -51,12 +70,14 @@ function StarBar({ onClick }) {
         starSelected && (
           <>
             <StarDetails>
-              <TextBox />
+              <TextBox value={description} onChange={(e) => {
+                setDescription(e.target.value)
+              }} />
             </StarDetails>
             
             <ButtonStyles>
-              <Button>Cancel</Button>
-              <Button>Confirm</Button>
+              <Button onClick={cancel}>Cancel</Button>
+              <Button onClick={submit}>Confirm</Button>
             </ButtonStyles>  
           </>
         )
