@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
@@ -6,7 +6,7 @@ import { StarDetails, StarStyle } from "./styles";
 import { LogoNav } from "../logo/styles";
 import { StyledTools } from "../navbar/styles";
 import { faBell } from "@fortawesome/free-regular-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useMatch } from "react-router-dom";
 import TextBox from "../textbox";
 import Button from "../button";
 import { ButtonStyles } from "../starbar/styles";
@@ -21,6 +21,10 @@ function StarBar({ onClick }) {
     setStarState(newStarState);
     onClick(newStarState.filter(Boolean).length);
   };
+
+  const starSelected = useMemo(() => {
+    return starState.find(s => s);
+  }, [starState]);
 
   return (
     <>
@@ -42,13 +46,21 @@ function StarBar({ onClick }) {
           ))}
         </div>
       </StarStyle>
-      <StarDetails>
-        <TextBox />
-      </StarDetails>
-      <ButtonStyles>
-        <Button>Cancel</Button>
-        <Button>Confirm</Button>
-      </ButtonStyles>
+
+      {
+        starSelected && (
+          <>
+            <StarDetails>
+              <TextBox />
+            </StarDetails>
+            
+            <ButtonStyles>
+              <Button>Cancel</Button>
+              <Button>Confirm</Button>
+            </ButtonStyles>  
+          </>
+        )
+      }
     </>
   );
 }
