@@ -32,3 +32,9 @@ export const StarDetails = styled.div`
     margin-bottom: ${whitespace.base};
   }
 `;
+
+export const ButtonStyles = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: ${whitespace.base};
+`;
