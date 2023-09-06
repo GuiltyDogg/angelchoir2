@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import whitespace from "../../subatomics/whitespace";
+import borderradius from "../../subatomics/borderradius";
 import colors from "../../subatomics/colors";
 
 export const StarStyle = styled.div`
@@ -17,5 +19,16 @@ export const StarStyle = styled.div`
 
   .filled-star {
     color: gold;
+  }
+`;
+
+export const StarDetails = styled.div`
+  display: flex;
+  textarea {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    margin-top: ${whitespace.base};
+    margin-bottom: ${whitespace.base};
   }
 `;
