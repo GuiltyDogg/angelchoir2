@@ -16,7 +16,7 @@ export const ScrollableWindow = styled.div`
 
 export const Footer = styled.footer`
   flex: 0 0 auto;
-  margin: ${whitespace.more};
+  margin: ${whitespace.base};
 `;
 
 export const Header = styled.header`

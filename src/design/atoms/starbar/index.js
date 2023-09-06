@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { StarStyle } from "./styles";
+import { StarDetails, StarStyle } from "./styles";
 import { LogoNav } from "../logo/styles";
 import { StyledTools } from "../navbar/styles";
 import { faBell } from "@fortawesome/free-regular-svg-icons";
 import { Link } from "react-router-dom";
+import TextBox from "../textbox";
+import Button from "../button";
+import { ButtonStyles } from "../button/styles";
 
 function StarBar({ onClick }) {
   const [starState, setStarState] = useState([false, false, false]);
@@ -39,6 +42,11 @@ function StarBar({ onClick }) {
           ))}
         </div>
       </StarStyle>
+      <StarDetails>
+        <TextBox />
+      </StarDetails>
+      <Button>Cancel</Button>
+      <Button>Confirm</Button>
     </>
   );
 }
