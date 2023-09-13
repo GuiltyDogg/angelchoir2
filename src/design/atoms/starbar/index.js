@@ -30,6 +30,9 @@ function StarBar({ onClick }) {
 
   const [starState, setStarState] = useState(defaultStarState);
   const [description, setDescription] = useState("");
+  const [isTextVisible, setIsTextVisible] = useState(true);
+  const [submitClicked, setSubmitClicked] = useState(false);
+  const [isRatingDisabled, setIsRatingDisabled] = useState(false);
 
   const updateStarState = (newState) => {
     setStarState(newState);
@@ -43,10 +46,12 @@ function StarBar({ onClick }) {
   };
 
   const toggleStar = (index) => {
-    const newStarState = starState.map((filled, i) =>
-      i <= index ? true : filled
-    );
-    updateStarState(newStarState);
+    if (!isRatingDisabled) {
+      const newStarState = starState.map((filled, i) =>
+        i <= index ? true : filled
+      );
+      updateStarState(newStarState);
+    }
   };
 
   const starSelected = useMemo(() => {
@@ -55,11 +60,17 @@ function StarBar({ onClick }) {
 
   const cancel = useCallback(() => {
     setStarState(defaultStarState);
+    setSubmitClicked(false);
+    setIsRatingDisabled(false);
   }, [defaultStarState]);
 
   const submit = useCallback(() => {
     console.log("submit", starState.filter((s) => s).length, description);
     updateDescription(description);
+    setIsTextVisible(false);
+    setSubmitClicked(true);
+    setIsRatingDisabled(true);
+    localStorage.setItem("description", description);
   }, [starState, description]);
 
   return (
@@ -79,13 +90,14 @@ function StarBar({ onClick }) {
                 onClick={() => toggleStar(index)}
                 icon={starFilled ? faStar : faStarRegular}
                 className={starFilled ? "filled-star" : ""}
+                style={{ pointerEvents: isRatingDisabled ? "none" : "null" }}
               />
             </StyledTools>
           ))}
         </div>
       </StarStyle>
 
-      {starSelected && (
+      {starSelected && isTextVisible && !submitClicked && (
         <>
           <StarDetails>
             <TextBox
@@ -101,6 +113,11 @@ function StarBar({ onClick }) {
             <Button onClick={submit}>Confirm</Button>
           </ButtonStyles>
         </>
+      )}
+      {submitClicked && !isTextVisible && (
+        <ButtonStyles>
+          <Button onClick={cancel}>Cancel</Button>
+        </ButtonStyles>
       )}
     </>
   );
