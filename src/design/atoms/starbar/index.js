@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useCallback } from "react";
+import React, { useMemo, useState, useCallback, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
@@ -12,46 +12,65 @@ import Button from "../button";
 import { ButtonStyles } from "../starbar/styles";
 
 function StarBar({ onClick }) {
-  const defaultStarState = [false, false, false]
+  const defaultStarState = [false, false, false];
+
+  useEffect(() => {
+    const storedStarState = JSON.parse(localStorage.getItem("starState"));
+    if (storedStarState) {
+      setStarState(storedStarState);
+    }
+  }, []);
+
+  useEffect(() => {
+    const storedDescription = localStorage.getItem("description");
+    if (storedDescription) {
+      setDescription(storedDescription);
+    }
+  }, []);
 
   const [starState, setStarState] = useState(defaultStarState);
-  const [description, setDescription] = useState('');
+  const [description, setDescription] = useState("");
+
+  const updateStarState = (newState) => {
+    setStarState(newState);
+    localStorage.setItem("starState", JSON.stringify(newState));
+    onClick(newState.filter(Boolean).length);
+  };
+
+  const updateDescription = (newDescription) => {
+    setDescription(newDescription);
+    localStorage.setItem("description", newDescription);
+  };
 
   const toggleStar = (index) => {
     const newStarState = starState.map((filled, i) =>
       i <= index ? true : filled
     );
-    setStarState(newStarState);
-    onClick(newStarState.filter(Boolean).length);
+    updateStarState(newStarState);
   };
 
   const starSelected = useMemo(() => {
-    return starState.find(s => s);
+    return starState.find((s) => s);
   }, [starState]);
 
   const cancel = useCallback(() => {
-    setStarState(defaultStarState)
-  }, [
-    defaultStarState
-  ]);
+    setStarState(defaultStarState);
+  }, [defaultStarState]);
 
   const submit = useCallback(() => {
-    console.log('submit', starState.filter(s => s).length, description);    
-  }, [
-    starState,
-    description
-  ]);
+    console.log("submit", starState.filter((s) => s).length, description);
+    updateDescription(description);
+  }, [starState, description]);
 
   return (
     <>
       <StarStyle>
-      <Link to="/Alerts">
-        { !starSelected &&
-                  <StyledTools>
-                  <FontAwesomeIcon icon={faBell} />
-                </StyledTools>
-      
-        }
+        <Link to="/Alerts">
+          {!starSelected && (
+            <StyledTools>
+              <FontAwesomeIcon icon={faBell} />
+            </StyledTools>
+          )}
         </Link>
         <div>
           {starState.map((starFilled, index) => (
@@ -66,22 +85,23 @@ function StarBar({ onClick }) {
         </div>
       </StarStyle>
 
-      {
-        starSelected && (
-          <>
-            <StarDetails>
-              <TextBox value={description} onChange={(e) => {
-                setDescription(e.target.value)
-              }} />
-            </StarDetails>
-            
-            <ButtonStyles>
-              <Button onClick={cancel}>Cancel</Button>
-              <Button onClick={submit}>Confirm</Button>
-            </ButtonStyles>  
-          </>
-        )
-      }
+      {starSelected && (
+        <>
+          <StarDetails>
+            <TextBox
+              value={description}
+              onChange={(e) => {
+                setDescription(e.target.value);
+              }}
+            />
+          </StarDetails>
+
+          <ButtonStyles>
+            <Button onClick={cancel}>Cancel</Button>
+            <Button onClick={submit}>Confirm</Button>
+          </ButtonStyles>
+        </>
+      )}
     </>
   );
 }
