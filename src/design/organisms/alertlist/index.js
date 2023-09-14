@@ -27,6 +27,7 @@ function AlertList() {
       location: "The Masquerade",
       time: "2023-08-08T18:49:43.416Z",
       starsSelected: starState.filter(Boolean).length,
+      description: localStorage.getItem("description") || "",
     },
     {
       id: 2,
@@ -35,6 +36,7 @@ function AlertList() {
       location: "The Masquerade",
       time: "2023-08-08T19:49:43.416Z",
       starsSelected: starState.filter(Boolean).length,
+      description: localStorage.getItem("description") || "",
     },
     {
       id: 3,
@@ -43,6 +45,7 @@ function AlertList() {
       location: "The Masquerade",
       time: "2023-08-08T20:49:43.416Z",
       starsSelected: starState.filter(Boolean).length,
+      description: localStorage.getItem("description") || "",
     },
     {
       id: 4,
@@ -51,6 +54,7 @@ function AlertList() {
       location: "The Masquerade",
       time: "2023-08-08T21:49:43.416Z",
       starsSelected: starState.filter(Boolean).length,
+      description: localStorage.getItem("description") || "",
     },
   ];
 
@@ -113,6 +117,7 @@ function AlertList() {
             </StarStyle>
             <p>User: {event.username}</p>
             <p>Time Alerted: {formattedDate}</p>
+            <p>Description: {event.description}</p>
           </div>
         );
       })}
