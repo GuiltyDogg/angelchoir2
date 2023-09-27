@@ -1,7 +1,7 @@
 import { DateTime } from "luxon";
 import React, { useMemo, useState, useCallback, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Avatar from "../../atoms/avatar";
+import { AlertContainer } from "./styles";
 import {
   EventBox,
   EventDiv,
@@ -13,11 +13,14 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons";
 import { StarStyle } from "../../atoms/starbar/styles";
 import { StyledTools } from "../../atoms/navbar/styles";
+import { CustomAvatarCircle } from "./styles";
 
 function AlertList() {
   const defaultStarState = [false, false, false];
 
   const [starState, setStarState] = useState(defaultStarState);
+
+  const [openDropdown, setOpenDropdown] = useState(events.map(() => false));
 
   const events = [
     {
@@ -59,6 +62,12 @@ function AlertList() {
   ];
 
   const milliseconds = events.sort();
+
+  const toggleDropdown = (index) => {
+    const newOpenDropdowns = [...openDropdown];
+    newOpenDropdowns[index] = !newOpenDropdowns[index];
+    setOpenDropdown(newOpenDropdowns);
+  };
 
   useEffect(() => {
     const storedStarState = JSON.parse(localStorage.getItem("starState"));
@@ -108,17 +117,19 @@ function AlertList() {
         );
 
         return (
-          <div key={event.id}>
+          <AlertContainer key={event.id}>
             <div>
-              <Avatar disableUpload={true} />
+              <CustomAvatarCircle disableUpload={true} />
             </div>
             <StarStyle>
-              <StyledTools>{starIcons(event.starsSelected)}</StyledTools>
+              <StyledTools className="alert-stars">
+                {starIcons(event.starsSelected)}
+              </StyledTools>
             </StarStyle>
             <p>User: {event.username}</p>
             <p>Time Alerted: {formattedDate}</p>
             <p>Description: {event.description}</p>
-          </div>
+          </AlertContainer>
         );
       })}
     </EventDiv>
