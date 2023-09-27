@@ -6,18 +6,16 @@ import AlertList from "../../design/organisms/alertlist";
 import { PageContainer } from "../../design/atoms/glass/styles";
 import { CardContainer } from "../../design/atoms/alertglass/styles";
 import AlertGlass from "../../design/atoms/alertglass";
+import AnchoredFooter from "../../design/layout/anchored-footer";
 
 function AlertPage() {
   return (
-    <>
-      <PageContainer>
-        <ToolBar title={"ALERTS"} />
-        <AlertList />
-      </PageContainer>
-      {/* Nuking the alert/check in pop up cards */}
-      {/* <GlassWindow></GlassWindow> */}
-      {/* <AlertGlass /> */}
-    </>
+      
+    <AnchoredFooter
+    header={<ToolBar title={"ALERTS"} />}
+    window={<AlertList />}
+    />
+
   );
 }
 

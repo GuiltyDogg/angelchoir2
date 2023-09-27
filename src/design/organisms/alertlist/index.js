@@ -1,7 +1,7 @@
 import { DateTime } from "luxon";
 import React, { useMemo, useState, useCallback, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { AlertContainer } from "./styles";
+import { AlertContainer, AlertDetails, AlertControls, AlertImage } from "./styles";
 import {
   EventBox,
   EventDiv,
@@ -9,11 +9,14 @@ import {
   EventTitle,
 } from "../eventscroll/styles";
 import StarBar from "../../atoms/starbar";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faLocation, faStar, faCamera } from "@fortawesome/free-solid-svg-icons";
 import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons";
 import { StarStyle } from "../../atoms/starbar/styles";
 import { StyledTools } from "../../atoms/navbar/styles";
+import { Text } from "../../atoms/typography";
 import { CustomAvatarCircle } from "./styles";
+import whitespace from "../../subatomics/whitespace";
+import Button from "../../atoms/button";
 
 function AlertList() {
   const defaultStarState = [false, false, false];
@@ -102,7 +105,7 @@ function AlertList() {
   };
 
   return (
-    <EventDiv>
+    <EventDiv style={{ display: 'block' }}>
       {sortedEvents.map((event) => {
         const formattedDate = DateTime.fromISO(event.time).toLocaleString(
           DateTime.DATETIME_SHORT
@@ -110,17 +113,45 @@ function AlertList() {
 
         return (
           <AlertContainer key={event.id}>
-            <div>
+            <AlertControls>
+              <div>
               <CustomAvatarCircle disableUpload={true} />
-            </div>
+
+              </div>
+
+              <FontAwesomeIcon
+              icon={faCamera}
+              style={{ color: "gold" }}
+              className="star-icon"
+            />
+
+
+            <FontAwesomeIcon
+              icon={faLocation}
+              style={{ color: "gold" }}
+              className="star-icon"
+            />
+
+            </AlertControls>
+            <AlertDetails>
+
             <StarStyle>
               <StyledTools className="alert-stars">
                 {starIcons(event.starsSelected)}
               </StyledTools>
+
+              <Text>{formattedDate}</Text>
             </StarStyle>
-            <p>User: {event.username}</p>
-            <p>Time Alerted: {formattedDate}</p>
-            <p>Description: {event.description}</p>
+
+            <AlertImage />
+
+  <p>Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. </p>
+
+<Button>Hide</Button>
+
+              
+
+            </AlertDetails>
           </AlertContainer>
         );
       })}
@@ -129,3 +160,4 @@ function AlertList() {
 }
 
 export default AlertList;
+
