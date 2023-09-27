@@ -20,8 +20,6 @@ function AlertList() {
 
   const [starState, setStarState] = useState(defaultStarState);
 
-  const [openDropdown, setOpenDropdown] = useState(events.map(() => false));
-
   const events = [
     {
       id: 1,
@@ -62,12 +60,6 @@ function AlertList() {
   ];
 
   const milliseconds = events.sort();
-
-  const toggleDropdown = (index) => {
-    const newOpenDropdowns = [...openDropdown];
-    newOpenDropdowns[index] = !newOpenDropdowns[index];
-    setOpenDropdown(newOpenDropdowns);
-  };
 
   useEffect(() => {
     const storedStarState = JSON.parse(localStorage.getItem("starState"));
