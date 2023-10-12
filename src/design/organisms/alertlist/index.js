@@ -1,7 +1,12 @@
 import { DateTime } from "luxon";
 import React, { useMemo, useState, useCallback, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { AlertContainer, AlertDetails, AlertControls, AlertImage } from "./styles";
+import {
+  AlertContainer,
+  AlertDetails,
+  AlertControls,
+  AlertImage,
+} from "./styles";
 import {
   EventBox,
   EventDiv,
@@ -9,7 +14,11 @@ import {
   EventTitle,
 } from "../eventscroll/styles";
 import StarBar from "../../atoms/starbar";
-import { faLocation, faStar, faCamera } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLocation,
+  faStar,
+  faCamera,
+} from "@fortawesome/free-solid-svg-icons";
 import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons";
 import { StarStyle } from "../../atoms/starbar/styles";
 import { StyledTools } from "../../atoms/navbar/styles";
@@ -17,6 +26,7 @@ import { Text } from "../../atoms/typography";
 import { CustomAvatarCircle } from "./styles";
 import whitespace from "../../subatomics/whitespace";
 import Button from "../../atoms/button";
+import colors from "../../subatomics/colors";
 
 function AlertList() {
   const defaultStarState = [false, false, false];
@@ -105,7 +115,7 @@ function AlertList() {
   };
 
   return (
-    <EventDiv style={{ display: 'block' }}>
+    <EventDiv style={{ display: "block" }}>
       {sortedEvents.map((event) => {
         const formattedDate = DateTime.fromISO(event.time).toLocaleString(
           DateTime.DATETIME_SHORT
@@ -115,42 +125,43 @@ function AlertList() {
           <AlertContainer key={event.id}>
             <AlertControls>
               <div>
-              <CustomAvatarCircle disableUpload={true} />
-
+                <CustomAvatarCircle disableUpload={true} />
               </div>
 
               <FontAwesomeIcon
-              icon={faCamera}
-              style={{ color: "gold" }}
-              className="star-icon"
-            />
+                icon={faCamera}
+                style={{ color: "#202224" }}
+                className="star-icon"
+              />
 
-
-            <FontAwesomeIcon
-              icon={faLocation}
-              style={{ color: "gold" }}
-              className="star-icon"
-            />
-
+              <FontAwesomeIcon
+                icon={faLocation}
+                style={{ color: "#202224" }}
+                className="star-icon"
+              />
             </AlertControls>
             <AlertDetails>
+              <StarStyle>
+                <StyledTools className="alert-stars">
+                  {starIcons(event.starsSelected)}
+                </StyledTools>
 
-            <StarStyle>
-              <StyledTools className="alert-stars">
-                {starIcons(event.starsSelected)}
-              </StyledTools>
+                <Text>{formattedDate}</Text>
+              </StarStyle>
 
-              <Text>{formattedDate}</Text>
-            </StarStyle>
+              <AlertImage />
 
-            <AlertImage />
+              <p>
+                Lots of words and stuff. Lots of words and stuff. Lots of words
+                and stuff. Lots of words and stuff. Lots of words and stuff.
+                Lots of words and stuff. Lots of words and stuff. Lots of words
+                and stuff. Lots of words and stuff. Lots of words and stuff.
+                Lots of words and stuff. Lots of words and stuff. Lots of words
+                and stuff. Lots of words and stuff. Lots of words and stuff.
+                Lots of words and stuff. Lots of words and stuff.{" "}
+              </p>
 
-  <p>Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. Lots of words and stuff. </p>
-
-<Button>Hide</Button>
-
-              
-
+              <Button>Hide</Button>
             </AlertDetails>
           </AlertContainer>
         );
@@ -160,4 +171,3 @@ function AlertList() {
 }
 
 export default AlertList;
-
