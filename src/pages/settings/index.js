@@ -66,6 +66,7 @@ function Settings() {
       footer={
         <>
           <Checkbox
+            data-testid="checkbox"
             checked={checked}
             setChecked={setChecked}
             label="Allow AngelChoir to use location?"

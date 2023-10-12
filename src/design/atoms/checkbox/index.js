@@ -13,7 +13,7 @@ function Checkbox({ checked, setChecked, label }) {
   );
 
   return (
-    <StyledCheck onClick={clickHandler}>
+    <StyledCheck data-testid="checkbox" onClick={clickHandler}>
       {label}{" "}
       {checked ? (
         <FontAwesomeIcon icon={faSquareCheck} />
