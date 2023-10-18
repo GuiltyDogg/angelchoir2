@@ -45,7 +45,7 @@ function useEvents() {
     };
 
     if (!!id) {
-      return events.find(eventMatch);
+      return events.find(eventMatch) || new Error("Event not found");
     } else {
       return events;
     }
