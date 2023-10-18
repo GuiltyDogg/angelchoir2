@@ -4,7 +4,7 @@ import { faSquareCheck } from "@fortawesome/free-solid-svg-icons";
 import { faSquare } from "@fortawesome/free-regular-svg-icons";
 import { StyledCheck } from "./styles";
 
-function Checkbox({ checked, setChecked, label }) {
+function Checkbox({ checked, setChecked, label, dataTestId }) {
   const clickHandler = useCallback(
     (e) => {
       setChecked(!checked);
@@ -13,7 +13,7 @@ function Checkbox({ checked, setChecked, label }) {
   );
 
   return (
-    <StyledCheck data-testid="checkbox" onClick={clickHandler}>
+    <StyledCheck data-testid={dataTestId} onClick={clickHandler}>
       {label}{" "}
       {checked ? (
         <FontAwesomeIcon icon={faSquareCheck} />
