@@ -10,9 +10,7 @@ import { useCallback } from "react";
 import { Link } from "react-router-dom";
 
 function Settings() {
-  const [selectedImage, setSelectedImage] = useState(
-    localStorage.getItem("AngelChoir::selectedImage") || ""
-  );
+  const selectedImage = localStorage.getItem("AngelChoir::selectedImage");
 
   const [userName, setUserName] = useState(
     localStorage.getItem("AngelChoir::userName") || ""
@@ -30,7 +28,7 @@ function Settings() {
     (e) => {
       localStorage.setItem("AngelChoir::userName", userName);
       localStorage.setItem("AngelChoir::userInfo", userInfo);
-      localStorage.setItem("AngelChoir::selectedImage", selectedImage);
+
       localStorage.setItem("AngelChoir::checked", checked);
     },
     [userName, userInfo, selectedImage, checked]
@@ -40,10 +38,7 @@ function Settings() {
       window={
         <>
           <Logo></Logo>
-          <Avatar
-            selectedImage={selectedImage}
-            setSelectedImage={setSelectedImage}
-          ></Avatar>
+          <Avatar></Avatar>
           <Input
             placeholder="Username"
             value={userName}
